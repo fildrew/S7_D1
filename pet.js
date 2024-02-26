@@ -32,17 +32,17 @@ console.log(p3.petCheck(p6));
 console.log(p4.petCheck(p3));
 
 const form = document.querySelector("form");
-const petList = document.querySelector("#listaAnimali");
+const petList = document.querySelector("#listPet");
 
 const pets = [];
 
-function aggiuntaAnimale() {
-  listaAnimali.innerHTML = "";
+function addPet() {
+  listPet.innerHTML = "";
   for (let i = 0; i < pets.length; i++) {
     const pet = pets[i];
     const li = document.createElement("li");
-    li.textContent = `${pet.petName} (${pet.species}, ${pet.breed}), Proprietario ${pet.ownerName}`;
-    listaAnimali.appendChild(li);
+    li.textContent = `${pet.petName} (${pet.species}, ${pet.breed}), Owner ${pet.ownerName}`;
+    listPet.appendChild(li);
   }
 }
 
@@ -57,5 +57,5 @@ form.addEventListener("submit", event => {
   pets.push(pet);
 
   event.target.reset();
-  aggiuntaAnimale();
+  addPet();
 });
