@@ -8,8 +8,8 @@ simile a “x è più vecchio di y” a seconda del risultato del confronto.
  Crea degli oggetti a partire dalla classe User e verifica che la comparazione tra le età funzioni correttamente. */
 
 class User {
-    constructor(_fisrtName, _lastName,_age,_location){
-        this.firstName = _fisrtName;
+    constructor(_firstName, _lastName,_age,_location){
+        this.firstName = _firstName;
         this.lastName = _lastName;
         this.age = _age;
         this.location = _location;
@@ -18,24 +18,25 @@ class User {
     //METODO
     compareAge(otherUser){
        if (this.age > otherUser.age) {
-        return `${this.firstName} is older than ${otherUser.age}`;
+        return `${this.firstName} is older than ${otherUser.firstName}`;
        } else if (this.age < otherUser.age) {
-        return `${this.firstName} is younger than ${otherUser.age}`;
+        return `${this.firstName} is younger than ${otherUser.firstName}`;
        }else {
-        return `${this.firstName} and ${otherUser.age} have the same age`;
+        return `${this.firstName} and ${otherUser.firstName} have the same age`;
        }
     }
 }
 
-const user1 = new ("John", "Martinez" ,27,"Rome");
-const user2 = new ("Rafa","Leao",23,"Lisbon");
-const user3 = new ("Julian","  Wirtz",21,"Berlin");
-const user4 = new ("Mohammed","Salah",32,"Cairo");
+const user1 = new User ("John", "Marco" , 27, "Rome");
+const user2 = new User("Rafa", "Leao", 23, "Lisbon");
+const user3 = new User("Julian", "Wirtz", 21, "Berlin");
+const user4 = new User("Mohammed", "Salah", 32, "Cairo");
 
 console.log(user1);
 console.log(user1.compareAge(user2));
 console.log(user2.compareAge(user3));
 console.log(user4.compareAge(user3));
+
 
 /* Crea un form per la creazione di oggetti “Pet” (animali domestici).
 La classe Pet dovrà essere dotata delle seguenti proprietà:
@@ -69,6 +70,7 @@ class Pet {
   console.log(p2.petCheck(p1));
   console.log(p3.petCheck(p6));
   console.log(p4.petCheck(p3));
+  console.log(p5.petCheck(p5));
   
   const form = document.querySelector("form");
   const petList = document.querySelector("#listPet");
