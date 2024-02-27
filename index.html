@@ -4,25 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>S7_D1</title>
+    <link rel="stylesheet" href="./style.css">
     
 <body>
-        <form>
-            <label for="petName">Pet Name:</label>
-            <input type="text" id="petName" name="petName" required>
+        <form class="form-box">
+            <label for="petName" class="petName">Pet Name:</label>
+            <input type="text" class="input-field" id="petName" name="petName" required>
             <br>
-            <label for="ownerName">Owner Name:</label>
-            <input type="text" id="ownerName" name="ownerName" required>
+            <label for="ownerName" class="ownerName">Owner Name:</label>
+            <input type="text" class="input-field" id="ownerName" name="ownerName" required>
             <br>
-            <label for="species">Species:</label>
-            <input type="text" id="species" name="species" required>
+            <label for="species" class="species">Species:</label>
+            <input type="text" class="input-field" id="species" name="species" required>
             <br>
-            <label for="breed">Breed:</label>
-            <input type="text" id="breed" name="breed" required>
+            <label for="breed" class="breed">Breed:</label>
+            <input type="text" class="input-field" id="breed" name="breed" required>
             <br>
-            <button type="submit">Invia</button>
+            <button type="submit" class="submit">Invia</button>
+            <h2>List</h2>
+            <ul id="listPet"></ul>
         </form>
-        <h2>List </h2>
-        <ul id="listPet"></ul>
+       
+        
 
 
     
